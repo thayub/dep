@@ -1,3 +1,3 @@
 
 #!/bin/bash
-service nginx restart > /var/log/restartnginx.out 2>&1
+service nginx restart 2>&1

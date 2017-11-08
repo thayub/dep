@@ -1,2 +1,2 @@
 #!/bin/bash
-apt-get install nginx > /var/log/installnginx.out 2>&1
+apt-get install nginx > 2>&1
