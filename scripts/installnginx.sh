@@ -1,2 +1,2 @@
 #!/bin/bash
-apt-get install nginx 2>&1
+apt-get install nginx -y 2>&1

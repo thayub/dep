@@ -1,2 +1,2 @@
 #!/bin/bash
-service httpd start 2>&1
+service nginx start 2>&1
