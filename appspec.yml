@@ -20,3 +20,9 @@ hooks:
    AfterInstall:
     - location: scripts/restartnginx.sh
       runas: root
+artifacts:
+  files:
+    - appspec.yml
+    - index.html
+    - IAM.txt
+    - scripts/*
