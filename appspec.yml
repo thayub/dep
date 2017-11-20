@@ -20,9 +20,26 @@ hooks:
    AfterInstall:
     - location: scripts/restartnginx.sh
       runas: root
+
+phases:
+  install:
+    commands:
+      - echo Entered the install phase...
+      - apt-get update -y
+  pre_build:
+    commands:
+      - echo Entered the pre_build phase...
+  build:
+    commands:
+      - echo Entered the build phase...
+      - echo Build started on `date`
+  post_build:
+    commands:
+      - echo Entered the post_build phase...
+      - echo Build completed on `date`
+
 artifacts:
-  files:
-    - appspec.yml
-    - index.html
-    - IAM.txt
-    - scripts/*
+  files: 
+    - '**/*'
+  base-directory: 'my-build*'
+  discard-paths: yes
